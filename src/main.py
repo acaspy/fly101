@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 from Utils import GeoUtils
 
-from FlightProviders import WizzairData
+from FlightProviders import WizzairData, RyanairData
 
 
 g = GeoUtils.GeoUtils()
@@ -11,9 +11,15 @@ app = Flask(__name__)
 
 @app.route('/<provider>/<departure>/<arrival>/<month>/<year>')
 def provider(provider, departure, arrival, month, year):
+    flights = []
     if provider == "wizzair":
         wizz = WizzairData.WizzairData()
-        return jsonify(wizz.read_flight_time_table(departure, arrival, str(month), str(year)))
+        flights = wizz.read_flight_time_table(departure, arrival, str(month), str(year))
+    if provider == "ryanair":
+        ryanair = RyanairData.RyanairData()
+        flights = ryanair.get_month_data(departure, arrival, str(month), str(year))
+    return jsonify(flights)
+
 
 @app.route('/signup')
 def signup():
