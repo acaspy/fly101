@@ -22,6 +22,8 @@ class WizzairData():
 
     def read_flight_time_table(self, departure, arrival ,month ,year, target_currency='EUR'):
         """reading json format from wizzair backend services for a whole month"""
+        departure = str(departure).upper()
+        arrival = str(arrival).upper()
         query = "https://cdn.static.wizzair.com/en-GB/TimeTableAjax?departureIATA="\
                 +departure+"&arrivalIATA="+arrival+"&year="+year+"&month="+month
         response = urllib2.urlopen(query)
