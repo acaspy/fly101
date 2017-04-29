@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .header {
+        margin-top: 1em;
+        margin-bottom: 50px;
+        }
+    </style>
+
+    <head>
+        <title>Fly100</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" class="active"><a href="/">Home</a>
+                        </li>
+                        <li role="presentation"><a href="#">Sign In</a>
+                        </li>
+                        <li role="presentation"><a href="/signup">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h3 class="text-muted">Fly100 - Multi City EuroTrips</h3>
+            </div>
+
+        </div>
+        <div class="container" align="center" >
+            {% block content %}{% endblock %}
+            <footer class="footer">
+                <p>&copy; Company 2017 </p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

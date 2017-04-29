@@ -1,0 +1,15 @@
+https://api.ryanair.com/farefinder/3/oneWayFares/TLV/PFO/cheapestPerDay?market=en-gb&outboundMonthOfDate=2017-04-29
+
+https://api.ryanair.com/farefinder/3/oneWayFares/TLV/PFO/cheapestPerDay?market=en-gb&outboundMonthOfDate=2017-04-29
+
+#fares
+https://api.ryanair.com/farefinder/3/oneWayFares?&arrivalAirportIataCode=PFO&departureAirportIataCode=TLV&language=en&limit=1&market=en-gb&offset=0&outboundDepartureDateFrom=2017-02-01&outboundDepartureDateTo=2017-10-28&priceValueTo=100
+
+
+#location
+
+https://api.ryanair.com/aggregate/3/common?embedded=airports,countries,cities,regions,nearbyAirports,defaultAirport&market=en-gb
+
+https://api.ryanair.com/aggregate/3/common?embedded=airports,countries,cities,regions,nearbyAirports,defaultAirport&market=en-gb
+
+
