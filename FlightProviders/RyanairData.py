@@ -19,6 +19,10 @@ class RyanairData:
         self._geo_utils = GeoUtils.GeoUtils()
 
     def get_month_data(self, departure, arrival, month, year, target_currency='EUR'):
+        departure = departure.upper()
+        arrival = arrival.upper()
+        if len(month) == 1:
+            month = "0"+str(month)
         c = None
         _date = str(year)+"-"+str(month)+"-"+"01"
         # _header = ('#departureCode',
@@ -130,7 +134,7 @@ class RyanairData:
 if __name__ == "__main__":
 
     _ryanair = RyanairData()
-    #print _ryanair.get_month_data('TLV', 'PFO', '05', '2017', 'EUR')
+    print _ryanair.get_month_data('TLV', 'PFO', '5', '2017', 'EUR')
     values = ("05", "2017")
     #_ryanair.create_flights_csv(*values)
 
